@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
@@ -7,3 +8,18 @@
     }
   ]
 }
+=======
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
+
+>>>>>>> e1088945368f636260963d52b41a5a91bf80ad07

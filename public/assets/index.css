@@ -1,0 +1,48 @@
+/* Custom animations and styles for AndamanAbode */
+
+/* Wavy text effect for the brand name in the header */
+.wavy-text span {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.wavy-text:hover span {
+  transform: translateY(-8px);
+}
+
+/* Bobbing animation for the main logo in the header */
+@keyframes bobbing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-bobbing {
+  animation: bobbing 3s ease-in-out infinite;
+}
+
+/* Fade in and up animation for section content */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply this animation to elements. The `forwards` keyword ensures it stays at its end state. */
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  /* Start hidden to prevent flash of unstyled content */
+  opacity: 0;
+}
